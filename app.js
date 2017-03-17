@@ -6,6 +6,10 @@ var express = require('express')
   , nib = require('nib')
 
 var app = express()
+// set the port of our application
+// process.env.PORT lets the port be set by Heroku
+var port = process.env.PORT || 8080;
+
 function compile(str, path) {
   return stylus(str)
     .set('filename', path)
@@ -26,4 +30,4 @@ app.get('/', function (req, res) {
   { title : 'Home' }
   )
 })
-app.listen(3000)
+app.listen(port)
