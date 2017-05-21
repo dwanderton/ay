@@ -30,4 +30,29 @@ app.get('/', function (req, res) {
   { title : 'Home' }
   )
 })
+app.get('/story', function (req, res) {
+  res.render('story',
+  { title : 'Our Story' }
+  )
+})
+app.get('/travel', function (req, res) {
+  res.render('travel',
+  { title : 'Travel' }
+  )
+})
+app.get('/burlington', function (req, res) {
+  res.render('burlington',
+  { title : 'In and Around Burlington' }
+  )
+})
+app.get('/faq', function (req, res) {
+  res.render('faq',
+  { title : 'FAQ' }
+  )
+})
+app.get('/family', function (req, res) {
+  res.render('family',
+  { title : 'Family' }
+  )
+})
 app.listen(port)
